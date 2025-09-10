@@ -1,3 +1,7 @@
+// queria pedir desculpas por não ter conseguido terminar o desafio a tempo e pelo código estar bagunçado
+// devido à minha rotina, só tive dois dias para fazer a tarefa
+// mas gostaria de parabenizar pela maneira que ele foi desenvolvido e as competências que ele trabalha 
+
 class AbrigoAnimais {
 
   encontraPessoas(brinquedosPessoa1, brinquedosPessoa2, ordemAnimais) {
