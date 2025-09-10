@@ -10,9 +10,9 @@ const animaisBrinquedos = [
     {nome: "Loco", tipo: "jabuti", brinquedos: ["SKATE", "RATO"]}
 ]
 
-var pessoa1 = ["RATO,BOLA"]
-var pessoa2 = ["RATO,BOLA"]
-var ordemAnimais = ["Rex,Mimi"]
+var pessoa1 = ["RATO,BOLA,SKATE"]
+var pessoa2 = ["SKATE,RATO"]
+var ordemAnimais = ["Rex,Loco"]
 var animaisPessoa1 = []
 var animaisPessoa2 = []
 var animaisAbrigo = []
@@ -80,6 +80,29 @@ function verificarBrinquedo() {
   }
 
   for (var i = 0 ; i < ordemAnimaisLista.length; i++) {
+    // let animal = ordemAnimaisInfo[i];
+  
+    // if (animal.nome === "Loco") {
+    //   let podePessoa1 = animaisPessoa1.length > 0 && animaisPessoa1.length < 3;
+    //   let podePessoa2 = animaisPessoa2.length > 0 && animaisPessoa2.length < 3;
+  
+    //   if (podePessoa1 && !podePessoa2) {
+    //     var resultado = animal.nome + " - pessoa 1";
+    //     animaisPessoa1.push(resultado);
+    //     animaisDestino.push(resultado);
+    //   } else if (podePessoa2 && !podePessoa1) {
+    //     var resultado = animal.nome + " - pessoa 2";
+    //     animaisPessoa2.push(resultado);
+    //     animaisDestino.push(resultado);
+    //   } else {
+    //     var resultado = animal.nome + " - abrigo";
+    //     animaisAbrigo.push(resultado);
+    //     animaisDestino.push(resultado);
+    //   }
+  
+    //   continue; 
+    // }
+
     if (ordemAnimaisInfo[i].brinquedos[i] === pessoa1[i] && ordemAnimaisInfo[i].brinquedos[i] !== pessoa2[i]) {
       var resultado = ordemAnimaisInfo[i].nome + " - pessoa 1"
       animaisPessoa1.push(resultado)

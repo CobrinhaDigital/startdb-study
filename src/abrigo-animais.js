@@ -96,6 +96,29 @@ class AbrigoAnimais {
         }
 
         for (var i = 0 ; i < ordemAnimais.length; i++) {
+          let animal = ordemAnimaisInfo[i];
+        
+          if (animal.nome === "Loco") {
+            let podePessoa1 = animaisPessoa1.length > 0 && animaisPessoa1.length < 3;
+            let podePessoa2 = animaisPessoa2.length > 0 && animaisPessoa2.length < 3;
+        
+            if (podePessoa1 && !podePessoa2) {
+              var resultado = animal.nome + " - pessoa 1";
+              animaisPessoa1.push(resultado);
+              animaisDestino.push(resultado);
+            } else if (podePessoa2 && !podePessoa1) {
+              var resultado = animal.nome + " - pessoa 2";
+              animaisPessoa2.push(resultado);
+              animaisDestino.push(resultado);
+            } else {
+              var resultado = animal.nome + " - abrigo";
+              animaisAbrigo.push(resultado);
+              animaisDestino.push(resultado);
+            }
+        
+            continue; 
+          }
+
           if (ordemAnimaisInfo[i].brinquedos[i] === brinquedosPessoa1[i] && ordemAnimaisInfo[i].brinquedos[i] !== brinquedosPessoa2[i]) {
             var resultado = ordemAnimaisInfo[i].nome + " - pessoa 1"
             animaisPessoa1.push(resultado)
@@ -121,7 +144,7 @@ class AbrigoAnimais {
     function verificarAnimaisPessoas() {
       while (animaisPessoa1.length <= 3) {
         if (ordemAnimais[i] === "Loco" && animaisPessoa1.length > 1) {
-          
+
         }
         verificarBrinquedo()
       }
